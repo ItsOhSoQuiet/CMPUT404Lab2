@@ -15,6 +15,7 @@ def get_request(addr):
         s.connect(sockaddr)
         s.sendall(payload.encode())
         s.shutdown(socket.SHUT_WR)
+        full_data = b""
         while True:
             data = s.recv(BUFFER_SIZE)
             if not data: break
