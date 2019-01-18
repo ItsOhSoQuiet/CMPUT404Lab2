@@ -2,11 +2,11 @@
 
 import socket
 
-HOST = ''
+HOST = 'localhost'
 PORT = 8001
 BUFFER_SIZE = 1024
 
-payload = "GET / HTTP/1.0\r\nHost: {}\r\n\r\n".format(HOST)
+payload = "GET / HTTP/1.0\r\nHost: www.google.com\r\n\r\n"
 
 def get_request(addr):
     (family, socktype, proto, canonname, sockaddr) = addr
